@@ -77,10 +77,10 @@ const PortfolioSection = () => {
     <section className="py-32 bg-gray-50">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-20">
-          <h2 className="text-6xl font-light text-black mb-8 tracking-tight">
+          <h2 className="text-6xl font-light text-black mb-8 tracking-tight relative">
             ПРОЕКТЫ
+            <div className="absolute -bottom-2 right-0 w-6 h-px bg-gray-300"></div>
           </h2>
-          <div className="w-24 h-1 bg-black mx-auto"></div>
         </div>
 
         {/* Фильтры */}
@@ -107,14 +107,16 @@ const PortfolioSection = () => {
         {/* Проекты */}
         <div className="grid lg:grid-cols-3 gap-8">
           {filteredProjects.map((project) => (
-            <div key={project.id} className="group cursor-pointer">
-              <div className="relative overflow-hidden bg-gray-100 aspect-[4/3] mb-6">
+            <div key={project.id} className="group cursor-pointer relative">
+              <div className="relative overflow-hidden bg-gray-100 aspect-[4/3] mb-6 border border-transparent group-hover:border-gray-200 transition-all duration-300">
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                 />
-                <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-10 transition-opacity duration-500"></div>
+                {/* Corner accent */}
+                <div className="absolute top-4 right-4 w-2 h-2 bg-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
 
               <div className="space-y-3">
