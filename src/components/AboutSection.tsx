@@ -2,9 +2,13 @@ const AboutSection = () => {
   return (
     <section className="py-20 bg-white px-4">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl font-bold text-center mb-16 text-gray-900">
+        <h2 className="text-4xl font-bold text-center mb-4 text-gray-900">
           О нас
         </h2>
+        <h3 className="text-xl md:text-2xl text-gray-600 mb-16 font-light text-center">
+          Веб-дизайн дуэт | Создаем цифровые решения с фокусом на маркетинг,
+          дизайн и креатив
+        </h3>
 
         <div className="grid md:grid-cols-2 gap-12 mb-16">
           {/* Алиса */}
