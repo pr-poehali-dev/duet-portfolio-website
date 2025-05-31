@@ -11,7 +11,7 @@ const AboutSection = () => {
           <div className="text-center">
             <div className="w-48 h-48 bg-[#4A6FA5] rounded-full mx-auto mb-6 flex items-center justify-center">
               <img
-                src="https://images.unsplash.com/photo-1494790108755-2616b612b47c?w=300&h=300&fit=crop&crop=face"
+                src="https://cdn.poehali.dev/files/c9872d54-df69-4e41-9776-e782ebb8be5f.jpg"
                 alt="Алиса"
                 className="w-44 h-44 rounded-full object-cover"
               />
