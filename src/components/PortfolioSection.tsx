@@ -16,7 +16,7 @@ const PortfolioSection = () => {
     {
       id: 1,
       title: "Корпоративный дашборд",
-      category: "Веб-интерфейс",
+      category: "ИНТЕРФЕЙС",
       description:
         "Редизайн комплексного дашборда для повышения ясности данных",
       author: "alice",
@@ -26,7 +26,7 @@ const PortfolioSection = () => {
     {
       id: 2,
       title: "Мобильное приложение банка",
-      category: "UX/UI дизайн",
+      category: "UX/UI",
       description: "Создание интуитивного интерфейса для банковских операций",
       author: "alice",
       image:
@@ -35,7 +35,7 @@ const PortfolioSection = () => {
     {
       id: 3,
       title: "SaaS платформа",
-      category: "Веб-дизайн",
+      category: "ВЕБ-ДИЗАЙН",
       description: "Дизайн-система для B2B сервиса автоматизации",
       author: "alice",
       image:
@@ -44,7 +44,7 @@ const PortfolioSection = () => {
     {
       id: 4,
       title: "Кафе-кондитерская",
-      category: "Брендинг",
+      category: "БРЕНДИНГ",
       description: "Создание яркого бренда и фирменного стиля для кафе",
       author: "anna",
       image:
@@ -53,7 +53,7 @@ const PortfolioSection = () => {
     {
       id: 5,
       title: "Лендинг стартапа",
-      category: "Веб-дизайн",
+      category: "ВЕБ-ДИЗАЙН",
       description: "Яркая посадочная страница для IT-продукта",
       author: "anna",
       image:
@@ -62,7 +62,7 @@ const PortfolioSection = () => {
     {
       id: 6,
       title: "Графическая айдентика",
-      category: "Графический дизайн",
+      category: "АЙДЕНТИКА",
       description: "Комплексная визуальная идентичность для модного бренда",
       author: "anna",
       image:
@@ -74,83 +74,59 @@ const PortfolioSection = () => {
     filter === "all" ? projects : projects.filter((p) => p.author === filter);
 
   return (
-    <section className="py-20 bg-[#F8F9FA] px-4">
-      <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl font-bold text-center mb-16 text-gray-900">
-          Наши проекты
-        </h2>
+    <section className="py-32 bg-gray-50">
+      <div className="max-w-6xl mx-auto px-6">
+        <div className="text-center mb-20">
+          <h2 className="text-6xl font-light text-black mb-8 tracking-tight">
+            ПРОЕКТЫ
+          </h2>
+          <div className="w-24 h-1 bg-black mx-auto"></div>
+        </div>
 
         {/* Фильтры */}
-        <div className="flex justify-center mb-12 space-x-4">
-          <button
-            onClick={() => setFilter("all")}
-            className={`px-6 py-2 rounded-sm font-medium transition-colors ${
-              filter === "all"
-                ? "bg-gray-900 text-white"
-                : "bg-white text-gray-600 hover:bg-gray-100"
-            }`}
-          >
-            Все
-          </button>
-          <button
-            onClick={() => setFilter("alice")}
-            className={`px-6 py-2 rounded-sm font-medium transition-colors ${
-              filter === "alice"
-                ? "text-white"
-                : "bg-white text-gray-600 hover:bg-gray-100"
-            }`}
-            style={{
-              backgroundColor: filter === "alice" ? "#4A6FA5" : undefined,
-            }}
-          >
-            Алиса
-          </button>
-          <button
-            onClick={() => setFilter("anna")}
-            className={`px-6 py-2 rounded-sm font-medium transition-colors ${
-              filter === "anna"
-                ? "text-white"
-                : "bg-white text-gray-600 hover:bg-gray-100"
-            }`}
-            style={{
-              backgroundColor: filter === "anna" ? "#D6809F" : undefined,
-            }}
-          >
-            Анна
-          </button>
+        <div className="flex justify-center mb-16 gap-2">
+          {[
+            { key: "all", label: "ВСЕ" },
+            { key: "alice", label: "АЛИСА", color: "bg-blue-500" },
+            { key: "anna", label: "АННА", color: "bg-red-500" },
+          ].map((item) => (
+            <button
+              key={item.key}
+              onClick={() => setFilter(item.key as any)}
+              className={`px-8 py-3 text-sm font-medium tracking-wider transition-all ${
+                filter === item.key
+                  ? `${item.color || "bg-black"} text-white`
+                  : "bg-white text-black border border-gray-200 hover:border-black"
+              }`}
+            >
+              {item.label}
+            </button>
+          ))}
         </div>
 
         {/* Проекты */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid lg:grid-cols-3 gap-8">
           {filteredProjects.map((project) => (
-            <div
-              key={project.id}
-              className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300 border"
-              style={{
-                borderColor: project.author === "alice" ? "#4A6FA5" : "#D6809F",
-              }}
-            >
-              <img
-                src={project.image}
-                alt={project.title}
-                className="w-full h-48 object-cover"
-              />
-              <div className="p-6">
-                <div className="flex items-center mb-2">
-                  <span
-                    className="text-sm font-medium px-2 py-1 rounded text-white"
-                    style={{
-                      backgroundColor:
-                        project.author === "alice" ? "#4A6FA5" : "#D6809F",
-                    }}
-                  >
-                    {project.category}
-                  </span>
+            <div key={project.id} className="group cursor-pointer">
+              <div className="relative overflow-hidden bg-gray-100 aspect-[4/3] mb-6">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
+              </div>
+
+              <div className="space-y-3">
+                <div className="text-xs font-medium text-gray-500 tracking-widest">
+                  {project.category}
                 </div>
-                <h3 className="text-xl font-bold mb-2 text-gray-900">
+                <h3 className="text-xl font-light text-black group-hover:text-gray-600 transition-colors">
                   {project.title}
                 </h3>
-                <p className="text-gray-600">{project.description}</p>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  {project.description}
+                </p>
               </div>
             </div>
           ))}
