@@ -25,7 +25,7 @@ const ProcessSection = () => {
   ];
 
   return (
-    <section className="py-32 bg-white">
+    <section className="py-20 bg-white">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-24">
           <h2 className="text-6xl font-light text-black mb-8 tracking-tight">
