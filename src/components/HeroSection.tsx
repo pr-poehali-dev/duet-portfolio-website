@@ -9,9 +9,6 @@ const HeroSection = () => {
           Веб-дизайн дуэт | Создаем цифровые решения с фокусом на маркетинг,
           дизайн и креатив
         </p>
-        <p className="text-lg text-gray-500 mb-8 max-w-2xl mx-auto">
-          Два взгляда, одна цель: идеальный дизайн для вас
-        </p>
         <button className="bg-gray-900 text-white px-8 py-4 rounded-sm font-medium hover:bg-gray-800 transition-colors duration-200">
           Смотреть работы
         </button>
