@@ -5,6 +5,9 @@ const HeroSection = () => {
         <h1 className="text-6xl md:text-8xl font-bold text-gray-900 mb-6 tracking-tight">
           Алиса и Анна
         </h1>
+        <p className="text-xl md:text-2xl text-gray-600 mb-8 leading-relaxed">
+          Два взгляда, одна цель: идеальный дизайн для вас.
+        </p>
         <button className="bg-gray-900 text-white px-8 py-4 rounded-sm font-medium hover:bg-gray-800 transition-colors duration-200">
           Смотреть работы
         </button>
