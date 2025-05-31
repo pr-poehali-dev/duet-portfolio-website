@@ -25,10 +25,10 @@ const HeroSection = () => {
 
           <div className="max-w-2xl mx-auto mb-12 relative">
             <p className="text-xl md:text-2xl font-light text-muted-foreground leading-relaxed text-balance">
-              Дизайн-дуэт для цифровых решений.
+              Создаём цифровые продукты, которые работают.
               <br />
               <span className="font-medium">
-                Минимализм встречает функциональность.
+                От концепции до запуска — полный цикл разработки.
               </span>
             </p>
             {/* Subtle line accent */}
