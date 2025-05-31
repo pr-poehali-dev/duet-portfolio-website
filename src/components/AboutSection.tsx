@@ -1,0 +1,74 @@
+const AboutSection = () => {
+  return (
+    <section className="py-20 bg-white px-4">
+      <div className="max-w-6xl mx-auto">
+        <h2 className="text-4xl font-bold text-center mb-16 text-gray-900">
+          О нас
+        </h2>
+
+        <div className="grid md:grid-cols-2 gap-12 mb-16">
+          {/* Алиса */}
+          <div className="text-center">
+            <div className="w-48 h-48 bg-[#4A6FA5] rounded-full mx-auto mb-6 flex items-center justify-center">
+              <img
+                src="https://images.unsplash.com/photo-1494790108755-2616b612b47c?w=300&h=300&fit=crop&crop=face"
+                alt="Алиса"
+                className="w-44 h-44 rounded-full object-cover"
+              />
+            </div>
+            <h3
+              className="text-2xl font-bold mb-2"
+              style={{ color: "#4A6FA5" }}
+            >
+              Алиса
+            </h3>
+            <p className="text-gray-600 leading-relaxed">
+              Фокус на UX/UI, исследования, веб-дизайн.
+              <br />
+              Опыт: 4 года.
+              <br />
+              Инструменты: Figma, Tilda, Adobe.
+              <br />
+              Люблю креатив.
+            </p>
+          </div>
+
+          {/* Анна */}
+          <div className="text-center">
+            <div className="w-48 h-48 bg-[#D6809F] rounded-full mx-auto mb-6 flex items-center justify-center">
+              <img
+                src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&h=300&fit=crop&crop=face"
+                alt="Анна"
+                className="w-44 h-44 rounded-full object-cover"
+              />
+            </div>
+            <h3
+              className="text-2xl font-bold mb-2"
+              style={{ color: "#D6809F" }}
+            >
+              Анна
+            </h3>
+            <p className="text-gray-600 leading-relaxed">
+              Яркие лендинг, брендинг, графический дизайн.
+              <br />
+              Опыт: 4 года.
+              <br />
+              Инструменты: Illustrator, Photoshop.
+              <br />
+              Люблю рисовать и смелые типографические решения.
+            </p>
+          </div>
+        </div>
+
+        <div className="text-center max-w-3xl mx-auto">
+          <p className="text-lg text-gray-600 leading-relaxed">
+            Мы объединили силы, чтобы предлагать вам полный цикл дизайна: от
+            маркетингового исследования до реализации креативных подходов
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default AboutSection;
