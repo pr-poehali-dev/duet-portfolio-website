@@ -5,10 +5,7 @@ const HeroSection = () => {
         <h1 className="text-6xl md:text-8xl font-bold text-gray-900 mb-6 tracking-tight">
           Алиса и Анна
         </h1>
-        <h2 className="text-xl md:text-2xl text-gray-600 mb-4 font-light">
-          Веб-дизайн дуэт | Создаем цифровые решения с фокусом на маркетинг,
-          дизайн и креатив
-        </h2>
+        <h2 className="text-xl md:text-2xl text-gray-600 mb-4 font-light"></h2>
         <p className="text-lg text-gray-500 mb-8 max-w-2xl mx-auto">
           Два взгляда, одна цель: идеальный дизайн для вас
         </p>
