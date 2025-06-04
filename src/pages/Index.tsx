@@ -8,12 +8,7 @@ import ContactSection from "@/components/ContactSection";
 const Index = () => {
   return (
     <div className="font-sans">
-      <Header />
       <HeroSection />
-      <AboutSection />
-      <PortfolioSection />
-      <ProcessSection />
-      <ContactSection />
     </div>
   );
 };
