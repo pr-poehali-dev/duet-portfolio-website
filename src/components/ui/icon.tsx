@@ -1,39 +1,28 @@
-import { LucideProps } from "lucide-react";
-import dynamicIconImports from "lucide-react/dynamicIconImports";
-import { lazy, Suspense } from "react";
+import React from 'react';
+import * as LucideIcons from 'lucide-react';
+import { LucideProps } from 'lucide-react';
 
-interface IconProps extends Omit<LucideProps, "ref"> {
-  name: keyof typeof dynamicIconImports;
-  fallback?: keyof typeof dynamicIconImports;
+interface IconProps extends LucideProps {
+  name: string;
+  fallback?: string;
 }
 
-const Icon = ({ name, fallback, ...props }: IconProps) => {
-  try {
-    const LucideIcon = lazy(dynamicIconImports[name]);
+const Icon: React.FC<IconProps> = ({ name, fallback = 'CircleAlert', ...props }) => {
+  const IconComponent = (LucideIcons as Record<string, React.FC<LucideProps>>)[name];
 
-    return (
-      <Suspense
-        fallback={
-          fallback ? (
-            <Icon name={fallback} {...props} />
-          ) : (
-            <div
-              style={{ width: props.size || 24, height: props.size || 24 }}
-            />
-          )
-        }
-      >
-        <LucideIcon {...props} />
-      </Suspense>
-    );
-  } catch {
-    if (fallback) {
-      return <Icon name={fallback} {...props} />;
+  if (!IconComponent) {
+    // Если иконка не найдена, используем fallback иконку
+    const FallbackIcon = (LucideIcons as Record<string, React.FC<LucideProps>>)[fallback];
+
+    // Если даже fallback не найден, возвращаем пустой span
+    if (!FallbackIcon) {
+      return <span className="text-xs text-gray-400">[icon]</span>;
     }
-    return (
-      <div style={{ width: props.size || 24, height: props.size || 24 }} />
-    );
+
+    return <FallbackIcon {...props} />;
   }
+
+  return <IconComponent {...props} />;
 };
 
 export default Icon;
