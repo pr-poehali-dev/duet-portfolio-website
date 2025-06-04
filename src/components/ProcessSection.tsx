@@ -28,9 +28,8 @@ const ProcessSection = () => {
     <section className="py-20 bg-white">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-24">
-          <h2 className="text-6xl font-light text-black mb-8 tracking-tight relative">
+          <h2 className="text-6xl font-light text-black mb-8 tracking-tight">
             ПРОЦЕСС
-            <div className="absolute top-0 -right-12 w-8 h-px bg-gradient-to-r from-black to-transparent"></div>
           </h2>
           <div className="w-24 h-1 bg-black mx-auto"></div>
         </div>
@@ -38,13 +37,11 @@ const ProcessSection = () => {
         <div className="grid lg:grid-cols-4 gap-12 mb-24">
           {steps.map((step, index) => (
             <div key={index} className="group">
-              <div className="relative mb-8 overflow-hidden">
-                <div className="text-8xl font-light text-gray-100 group-hover:text-gray-200 transition-colors duration-500 relative z-10">
+              <div className="relative mb-8">
+                <div className="text-8xl font-light text-gray-100 group-hover:text-gray-200 transition-colors">
                   {step.number}
                 </div>
-                <div className="absolute bottom-0 left-0 w-0 h-1 bg-black group-hover:w-full transition-all duration-700 ease-out"></div>
-                {/* Subtle floating accent */}
-                <div className="absolute top-2 right-2 w-1 h-1 bg-gray-400 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-200"></div>
+                <div className="absolute bottom-0 left-0 w-0 h-1 bg-black group-hover:w-full transition-all duration-500"></div>
               </div>
               <h3 className="text-xl font-medium text-black mb-4 tracking-wide">
                 {step.title}
