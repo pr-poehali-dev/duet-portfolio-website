@@ -4,44 +4,45 @@ const HeroSection = () => {
   return (
     <>
       <Header />
-      <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
-        {/* Grid background */}
-        <div className="absolute inset-0 grid-dot opacity-40"></div>
+      <section className="min-h-screen flex items-center justify-center relative bg-white">
+        {/* Левая вертикальная линия */}
+        <div className="absolute left-8 top-1/2 -translate-y-1/2 w-1 h-96 bg-emerald-500"></div>
 
-        <div className="relative z-10 text-center max-w-7xl mx-auto px-6">
+        {/* Правая вертикальная линия */}
+        <div className="absolute right-8 top-1/4 w-1 h-80 bg-emerald-500"></div>
+
+        <div className="relative z-10 text-center max-w-4xl mx-auto px-6">
           <div className="animate-fade-in">
-            <h1 className="text-[clamp(3rem,8vw,12rem)] font-black leading-[0.85] tracking-tighter mb-8">
+            <h1 className="text-[clamp(4rem,10vw,8rem)] font-black leading-[0.9] tracking-tight mb-4 text-black">
               АЛИСА
               <br />
-              <span className="text-emerald-500">×</span>
+              <span className="text-emerald-500 text-[clamp(3rem,8vw,6rem)]">
+                ×
+              </span>
               <br />
               АННА
             </h1>
 
-            <div className="max-w-2xl mx-auto mb-12">
-              <p className="text-xl md:text-2xl font-light text-muted-foreground leading-relaxed text-balance">
+            <div className="max-w-2xl mx-auto mb-12 mt-8">
+              <p className="text-lg text-gray-600 leading-relaxed mb-2">
                 Дизайн-дуэт для цифровых решений.
-                <br />
+              </p>
+              <p className="text-lg text-gray-600 leading-relaxed">
                 Минимализм встречает функциональность.
               </p>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <button className="group relative overflow-hidden bg-primary text-primary-foreground px-12 py-4 font-medium text-lg transition-all duration-300 hover:scale-[1.02]">
-                <span className="relative z-10">СМОТРЕТЬ РАБОТЫ</span>
-                <div className="absolute inset-0 bg-accent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
+              <button className="bg-emerald-500 text-white px-8 py-3 font-medium text-sm tracking-wide hover:bg-emerald-600 transition-colors">
+                СМОТРЕТЬ РАБОТЫ
               </button>
 
-              <button className="font-medium text-lg px-12 py-4 border-2 border-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300">
+              <button className="font-medium text-sm px-8 py-3 border-2 border-gray-300 text-gray-700 hover:border-emerald-500 hover:text-emerald-500 transition-all duration-300 tracking-wide">
                 СВЯЗАТЬСЯ
               </button>
             </div>
           </div>
         </div>
-
-        {/* Geometric accent */}
-        <div className="absolute top-1/4 right-12 w-2 h-32 bg-emerald-500 hidden lg:block"></div>
-        <div className="absolute bottom-1/4 left-12 w-2 h-24 bg-emerald-600 hidden lg:block"></div>
       </section>
     </>
   );

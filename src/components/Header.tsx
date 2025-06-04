@@ -12,19 +12,21 @@ const Header = () => {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
-      <div className="max-w-7xl mx-auto px-6 py-4">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm">
+      <div className="max-w-7xl mx-auto px-8 py-6">
         <nav className="flex items-center justify-between">
           {/* Logo */}
-          <div className="font-black text-xl tracking-tight">АЛИСА × АННА</div>
+          <div className="font-bold text-lg tracking-tight text-black">
+            АЛИСА × АННА
+          </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-12">
             {navItems.map((item) => (
               <a
                 key={item.label}
                 href={item.href}
-                className="font-medium text-sm tracking-wide hover:text-emerald-500 transition-colors duration-200"
+                className="font-medium text-sm tracking-wide text-gray-700 hover:text-black transition-colors duration-200"
               >
                 {item.label}
               </a>
@@ -42,13 +44,13 @@ const Header = () => {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden mt-4 pb-4 border-t border-border">
+          <div className="md:hidden mt-4 pb-4 border-t border-gray-200">
             <div className="flex flex-col space-y-4 pt-4">
               {navItems.map((item) => (
                 <a
                   key={item.label}
                   href={item.href}
-                  className="font-medium text-sm tracking-wide hover:text-emerald-500 transition-colors duration-200"
+                  className="font-medium text-sm tracking-wide text-gray-700 hover:text-black transition-colors duration-200"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.label}
