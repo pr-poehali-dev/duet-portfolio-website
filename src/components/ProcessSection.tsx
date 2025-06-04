@@ -2,81 +2,92 @@ const ProcessSection = () => {
   const steps = [
     {
       number: "01",
-      title: "Исследование",
+      title: "ИССЛЕДОВАНИЕ",
       description:
         "Анализируем ваш бизнес, аудиторию и конкурентов для понимания задач",
     },
     {
       number: "02",
-      title: "Стратегия",
+      title: "СТРАТЕГИЯ",
       description: "Разрабатываем концепцию и выбираем оптимальные решения",
     },
     {
       number: "03",
-      title: "Дизайн",
+      title: "ДИЗАЙН",
       description: "Создаем макеты, прототипы и финальный дизайн",
     },
     {
       number: "04",
-      title: "Реализация",
+      title: "РЕАЛИЗАЦИЯ",
       description:
         "Доводим проект до готового результата с вниманием к деталям",
     },
   ];
 
   return (
-    <section className="py-20 bg-white px-4">
-      <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl font-bold text-center mb-16 text-gray-900">
-          Наш процесс
-        </h2>
+    <section className="py-20 bg-white">
+      <div className="max-w-6xl mx-auto px-6">
+        <div className="text-center mb-24">
+          <h2 className="text-6xl font-light text-black mb-8 tracking-tight relative">
+            ПРОЦЕСС
+            <div className="absolute top-0 -right-12 w-8 h-px bg-gradient-to-r from-black to-transparent"></div>
+          </h2>
+          <div className="w-24 h-1 bg-black mx-auto"></div>
+        </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid lg:grid-cols-4 gap-12 mb-24">
           {steps.map((step, index) => (
-            <div key={index} className="text-center">
-              <div className="text-6xl font-bold text-gray-200 mb-4">
-                {step.number}
+            <div key={index} className="group">
+              <div className="relative mb-8 overflow-hidden">
+                <div className="text-8xl font-light text-gray-100 group-hover:text-gray-200 transition-colors duration-500 relative z-10">
+                  {step.number}
+                </div>
+                <div className="absolute bottom-0 left-0 w-0 h-1 bg-black group-hover:w-full transition-all duration-700 ease-out"></div>
+                {/* Subtle floating accent */}
+                <div className="absolute top-2 right-2 w-1 h-1 bg-gray-400 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-200"></div>
               </div>
-              <h3 className="text-xl font-bold mb-3 text-gray-900">
+              <h3 className="text-xl font-medium text-black mb-4 tracking-wide">
                 {step.title}
               </h3>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-gray-600 leading-relaxed text-sm">
                 {step.description}
               </p>
             </div>
           ))}
         </div>
 
-        <div className="mt-16 bg-[#F8F9FA] rounded-lg p-8 text-center">
-          <h3 className="text-2xl font-bold mb-4 text-gray-900">Почему мы?</h3>
-          <div className="grid md:grid-cols-3 gap-8">
-            <div>
-              <h4
-                className="font-bold text-lg mb-2"
-                style={{ color: "#4A6FA5" }}
-              >
-                Комплексный подход
+        <div className="border border-gray-200 p-12">
+          <h3 className="text-3xl font-light text-black mb-12 text-center tracking-wide">
+            ПОЧЕМУ МЫ
+          </h3>
+
+          <div className="grid md:grid-cols-3 gap-12">
+            <div className="text-center">
+              <div className="w-4 h-4 bg-blue-500 mx-auto mb-6"></div>
+              <h4 className="font-medium text-lg mb-4 tracking-wide">
+                КОМПЛЕКСНЫЙ ПОДХОД
               </h4>
-              <p className="text-gray-600">
+              <p className="text-gray-600 text-sm leading-relaxed">
                 Покрываем все этапы: от исследований до реализации
               </p>
             </div>
-            <div>
-              <h4
-                className="font-bold text-lg mb-2"
-                style={{ color: "#D6809F" }}
-              >
-                Индивидуальность
+
+            <div className="text-center">
+              <div className="w-4 h-4 bg-red-500 mx-auto mb-6"></div>
+              <h4 className="font-medium text-lg mb-4 tracking-wide">
+                ИНДИВИДУАЛЬНОСТЬ
               </h4>
-              <p className="text-gray-600">
+              <p className="text-gray-600 text-sm leading-relaxed">
                 Каждый проект уникален и отражает ваш бренд
               </p>
             </div>
-            <div>
-              <h4 className="font-bold text-lg mb-2 text-gray-900">
-                Результат
+
+            <div className="text-center">
+              <div className="w-4 h-4 bg-black mx-auto mb-6"></div>
+              <h4 className="font-medium text-lg mb-4 tracking-wide">
+                РЕЗУЛЬТАТ
               </h4>
-              <p className="text-gray-600">
+              <p className="text-gray-600 text-sm leading-relaxed">
                 Ориентируемся на бизнес-цели и рост показателей
               </p>
             </div>
