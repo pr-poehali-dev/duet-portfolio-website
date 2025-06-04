@@ -24,7 +24,7 @@ const Header = () => {
               <a
                 key={item.label}
                 href={item.href}
-                className="font-medium text-sm tracking-wide hover:text-accent transition-colors duration-200"
+                className="font-medium text-sm tracking-wide hover:text-emerald-500 transition-colors duration-200"
               >
                 {item.label}
               </a>
@@ -48,7 +48,7 @@ const Header = () => {
                 <a
                   key={item.label}
                   href={item.href}
-                  className="font-medium text-sm tracking-wide hover:text-accent transition-colors duration-200"
+                  className="font-medium text-sm tracking-wide hover:text-emerald-500 transition-colors duration-200"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.label}

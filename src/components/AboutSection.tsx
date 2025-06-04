@@ -24,7 +24,7 @@ const AboutSection = () => {
                   className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
                 />
               </div>
-              <div className="absolute -bottom-4 -right-4 w-16 h-16 bg-blue-500"></div>
+              <div className="absolute -bottom-4 -right-4 w-16 h-16 bg-emerald-500"></div>
             </div>
             <h3 className="text-3xl font-light text-black mb-4 tracking-wide">
               АЛИСА
@@ -46,7 +46,7 @@ const AboutSection = () => {
                   className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
                 />
               </div>
-              <div className="absolute -bottom-4 -right-4 w-16 h-16 bg-red-500"></div>
+              <div className="absolute -bottom-4 -right-4 w-16 h-16 bg-emerald-600"></div>
             </div>
             <h3 className="text-3xl font-light text-black mb-4 tracking-wide">
               АННА

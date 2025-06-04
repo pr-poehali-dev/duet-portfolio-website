@@ -60,7 +60,7 @@ const ProcessSection = () => {
 
           <div className="grid md:grid-cols-3 gap-12">
             <div className="text-center">
-              <div className="w-4 h-4 bg-blue-500 mx-auto mb-6"></div>
+              <div className="w-4 h-4 bg-emerald-500 mx-auto mb-6"></div>
               <h4 className="font-medium text-lg mb-4 tracking-wide">
                 КОМПЛЕКСНЫЙ ПОДХОД
               </h4>
@@ -70,7 +70,7 @@ const ProcessSection = () => {
             </div>
 
             <div className="text-center">
-              <div className="w-4 h-4 bg-red-500 mx-auto mb-6"></div>
+              <div className="w-4 h-4 bg-emerald-600 mx-auto mb-6"></div>
               <h4 className="font-medium text-lg mb-4 tracking-wide">
                 ИНДИВИДУАЛЬНОСТЬ
               </h4>

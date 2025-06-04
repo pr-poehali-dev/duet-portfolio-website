@@ -12,15 +12,15 @@ const ContactSection = () => {
 
         <div className="grid md:grid-cols-2 gap-8 mb-16">
           <div className="group cursor-pointer">
-            <div className="border border-gray-700 p-12 hover:border-blue-500 transition-colors">
-              <div className="w-4 h-4 bg-blue-500 mb-8"></div>
+            <div className="border border-gray-700 p-12 hover:border-emerald-500 transition-colors">
+              <div className="w-4 h-4 bg-emerald-500 mb-8"></div>
               <h3 className="text-2xl font-light mb-2 tracking-wide">АЛИСА</h3>
               <p className="text-gray-400 mb-6 text-sm">
                 UX/UI ДИЗАЙН, ИССЛЕДОВАНИЯ
               </p>
               <a
                 href="mailto:alice@example.com"
-                className="text-white hover:text-blue-400 transition-colors font-medium"
+                className="text-white hover:text-emerald-400 transition-colors font-medium"
               >
                 alice@example.com
               </a>
@@ -28,15 +28,15 @@ const ContactSection = () => {
           </div>
 
           <div className="group cursor-pointer">
-            <div className="border border-gray-700 p-12 hover:border-red-500 transition-colors">
-              <div className="w-4 h-4 bg-red-500 mb-8"></div>
+            <div className="border border-gray-700 p-12 hover:border-emerald-600 transition-colors">
+              <div className="w-4 h-4 bg-emerald-600 mb-8"></div>
               <h3 className="text-2xl font-light mb-2 tracking-wide">АННА</h3>
               <p className="text-gray-400 mb-6 text-sm">
                 БРЕНДИНГ, ГРАФИЧЕСКИЙ ДИЗАЙН
               </p>
               <a
                 href="mailto:anna@example.com"
-                className="text-white hover:text-red-400 transition-colors font-medium"
+                className="text-white hover:text-emerald-400 transition-colors font-medium"
               >
                 anna@example.com
               </a>

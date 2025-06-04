@@ -87,8 +87,8 @@ const PortfolioSection = () => {
         <div className="flex justify-center mb-16 gap-2">
           {[
             { key: "all", label: "ВСЕ" },
-            { key: "alice", label: "АЛИСА", color: "bg-blue-500" },
-            { key: "anna", label: "АННА", color: "bg-red-500" },
+            { key: "alice", label: "АЛИСА", color: "bg-emerald-500" },
+            { key: "anna", label: "АННА", color: "bg-emerald-600" },
           ].map((item) => (
             <button
               key={item.key}

@@ -13,7 +13,7 @@ const HeroSection = () => {
             <h1 className="text-[clamp(3rem,8vw,12rem)] font-black leading-[0.85] tracking-tighter mb-8">
               АЛИСА
               <br />
-              <span className="text-accent">×</span>
+              <span className="text-emerald-500">×</span>
               <br />
               АННА
             </h1>
@@ -40,8 +40,8 @@ const HeroSection = () => {
         </div>
 
         {/* Geometric accent */}
-        <div className="absolute top-1/4 right-12 w-2 h-32 bg-accent hidden lg:block"></div>
-        <div className="absolute bottom-1/4 left-12 w-2 h-24 bg-primary hidden lg:block"></div>
+        <div className="absolute top-1/4 right-12 w-2 h-32 bg-emerald-500 hidden lg:block"></div>
+        <div className="absolute bottom-1/4 left-12 w-2 h-24 bg-emerald-600 hidden lg:block"></div>
       </section>
     </>
   );
