@@ -6,33 +6,20 @@ const HeroSection = () => {
 
       <div className="relative z-10 text-center max-w-7xl mx-auto px-6">
         <div className="animate-fade-in">
-          <h1 className="text-[clamp(3rem,8vw,12rem)] font-black leading-[0.8] tracking-[-0.03em] mb-8 relative">
-            <span className="inline-block hover:rotate-1 transition-transform duration-300">
-              АЛИСА
-            </span>
+          <h1 className="text-[clamp(3rem,8vw,12rem)] font-black leading-[0.85] tracking-tighter mb-8">
+            АЛИСА
             <br />
-            <span className="text-accent inline-block hover:scale-110 transition-transform duration-200 origin-center">
-              ×
-            </span>
+            <span className="text-accent">×</span>
             <br />
-            <span className="inline-block hover:-rotate-1 transition-transform duration-300">
-              АННА
-            </span>
-            {/* Floating accent dots */}
-            <div className="absolute -top-4 right-0 w-3 h-3 bg-accent rounded-full animate-pulse"></div>
-            <div className="absolute top-1/2 -left-8 w-2 h-2 bg-primary rounded-full animate-pulse delay-500"></div>
+            АННА
           </h1>
 
-          <div className="max-w-2xl mx-auto mb-12 relative">
+          <div className="max-w-2xl mx-auto mb-12">
             <p className="text-xl md:text-2xl font-light text-muted-foreground leading-relaxed text-balance">
               Дизайн-дуэт для цифровых решений.
               <br />
-              <span className="font-medium">
-                Минимализм встречает функциональность.
-              </span>
+              Минимализм встречает функциональность.
             </p>
-            {/* Subtle line accent */}
-            <div className="absolute -left-4 top-4 w-px h-16 bg-gradient-to-b from-accent to-transparent hidden md:block"></div>
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
