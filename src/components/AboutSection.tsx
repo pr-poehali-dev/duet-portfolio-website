@@ -3,10 +3,13 @@ const AboutSection = () => {
     <section className="py-20 bg-white">
       <div className="max-w-5xl mx-auto px-6">
         <div className="text-center mb-24">
-          <h2 className="text-6xl font-light text-black mb-8 tracking-tight">
+          <h2 className="text-6xl font-light text-black mb-8 tracking-tight relative">
             О НАС
+            <div className="absolute -top-2 -right-8 w-1 h-1 bg-blue-500 rounded-full"></div>
           </h2>
-          <div className="w-24 h-1 bg-black mx-auto mb-12"></div>
+          <div className="w-24 h-1 bg-black mx-auto mb-12 relative">
+            <div className="absolute -right-6 top-0 w-1 h-1 bg-red-500 rounded-full"></div>
+          </div>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Веб-дизайн дуэт. Создаем цифровые решения с фокусом на маркетинг,
             дизайн и креатив
